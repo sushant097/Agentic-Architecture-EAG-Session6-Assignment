@@ -90,6 +90,32 @@ uv run mcp-server
 
 ---
 
+## 🧩 Installing the Chrome Extension
+
+Once your backend (`agent-server`) is running, you can side-load the Chrome Extension to interact with it locally.
+
+### Steps
+
+1. **Open Chrome**
+   Go to `chrome://extensions/`
+
+2. **Enable Developer Mode**
+   Toggle **Developer mode** at the top right.
+
+3. **Click “Load unpacked”**
+   Select the folder containing your extension files (must include `manifest.json`, `popup.html`, `background.js`, etc.).
+
+4. The extension should appear in your toolbar — click the icon to open it.
+
+5. The extension’s popup sends your queries and preferences to `http://localhost:8080/agent`.
+
+🧭 **Reference:**
+If you face issues loading it manually, check this helpful StackOverflow discussion:
+👉 [Install Chrome extension from outside the Chrome Web Store](https://stackoverflow.com/questions/24577024/install-chrome-extension-form-outside-the-chrome-web-store)
+
+---
+
+
 ## 🧠 Agent Flow (Step-by-Step)
 
 1. **User Input:** Chrome extension sends query + preferences (likes, location, interests).
