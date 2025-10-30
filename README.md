@@ -23,6 +23,12 @@ The system doesn’t just summarize — it acts like an **autonomous financial a
 
 ---
 
+## 🎬 Demo Video
+
+[![Watch the Demo](https://img.youtube.com/vi/Gnc-11kfXFc/0.jpg)](https://youtu.be/Gnc-11kfXFc)
+
+---
+
 ## 🧩 Project Structure
 
 The architecture follows the classic **Agentic 4-layer design**:
