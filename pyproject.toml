@@ -1,0 +1,44 @@
+[project]
+name = "agentic-ticker-agent"
+version = "0.1.0"
+description = "Agentic AI Chrome backend: multi-step stock news ↔ price research with tool feedback loop"
+readme = "README.md"
+authors = [
+    { name = "Sushant Gautam", email = "" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.120.2",
+    "google-genai>=1.47.0",
+    "mcp>=1.19.0",
+    "pandas>=2.3.3",
+    "pydantic>=2.12.3",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.38.0",
+    "yfinance>=0.2.66",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6.0",
+  "mypy>=1.10.0",
+  "pytest>=8.2.0",
+  "httpx>=0.27.0",
+]
+
+[project.scripts]
+# `uv run agent-server` will start the API (uses the helper in app.py below)
+agent-server = "agent_server.app:main"
+mcp-server   = "agent_server.action:run_mcp"
+prompt-verify = "agent_server.prompt_eval:main"
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# tell hatchling to include the flat package folder
+packages = ["src/agent_server"]
+
+[tool.ruff]
+line-length = 100
