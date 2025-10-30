@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Agentic Ticker Research</title>
+  <style>
+    :root { --fg:#111827; --muted:#6b7280; --bg:#f9fafb; --border:#e5e7eb; --primary:#2563eb; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding:12px; width:440px; background:var(--bg); color:var(--fg); }
+    h2 { margin:12px 0 8px; font-size:14px; border-bottom:1px solid var(--border); padding-bottom:4px; }
+    .row { display:flex; gap:8px; margin:6px 0; }
+    label { font-size:12px; color:var(--muted); }
+    input, select, button, textarea {
+      font-size:13px; padding:8px; border-radius:8px; border:1px solid var(--border); background:#fff; outline:none;
+    }
+    input, select { flex:1; }
+    textarea { width:100%; height:80px; resize:vertical; }
+    button { background:var(--primary); color:#fff; border:none; cursor:pointer; }
+    button.secondary { background:#fff; color:var(--fg); border:1px solid var(--border); }
+    button:hover { filter:brightness(0.95); }
+    #status { font-size:12px; margin-top:6px; color:var(--muted); }
+    #status.ok { color:#16a34a; } #status.err { color:#dc2626; } #status.warn { color:#d97706; }
+    #output {
+      white-space: pre-wrap; background:#fff; border:1px solid var(--border); padding:10px; margin-top:10px;
+      border-radius:8px; font-size:13px; max-height:380px; overflow:auto;
+    }
+    .hint { font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <h2>⚙️ Server</h2>
+  <div class="row">
+    <label style="flex:0 0 40px;">URL</label>
+    <input id="serverUrl" value="http://localhost:8080" placeholder="http://localhost:8080">
+  </div>
+  <div class="row">
+    <label style="flex:0 0 40px;">SID</label>
+    <input id="sessionId" placeholder="session id (e.g., demo)">
+    <button id="resetTranscript" class="secondary" title="Clear local turns only">Reset</button>
+  </div>
+
+  <h2>🧩 Preferences</h2>
+  <div class="row">
+    <input id="prefTickers" placeholder="Preferred tickers (comma-separated, optional)">
+  </div>
+  <div class="hint">These get sent as <code>prefs.tickers</code> and help the agent plan. Optional.</div>
+
+  <h2>📈 Agentic Stock Research</h2>
+  <div class="row">
+    <input id="agentTicker" placeholder="Ticker (e.g., AAPL)">
+    <input id="agentDays" placeholder="Days (e.g., 30)" style="flex:0 0 110px;">
+  </div>
+  <div class="row">
+    <textarea id="agentQuery" placeholder="Natural language task. Example:
+Find the news about AAPL in the last 30 days and link it with daily stock price changes."></textarea>
+  </div>
+  <div class="row">
+    <button id="runAgent">Run Agent</button>
+    <button id="runAgentAgain" class="secondary" title="Send same query again with current transcript">Continue</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="output"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
