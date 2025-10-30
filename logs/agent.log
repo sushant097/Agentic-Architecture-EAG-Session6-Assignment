@@ -1,0 +1,238 @@
+2025-10-29 20:45:29,798 INFO agent_app: TURN ADDED: user  | Find the news about META and link to stock price change....
+2025-10-29 20:45:29,804 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:30,405 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:30,408 INFO root: Calling tool: ticker_info args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:45:30,839 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:31,324 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:31,327 INFO root: Calling tool: news_vs_price args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:45:31,748 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:32,171 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:32,174 INFO root: Calling tool: summarize_news args={'headline': "Alphabet stock jumps as Q3 earnings, revenue surpass Wall Street's expectations", 'ticker': 'META'}
+2025-10-29 20:45:32,174 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:33,066 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:33,069 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:33,558 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:33,560 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Nasdaq clinches recor', 'ticker': 'META'}
+2025-10-29 20:45:33,561 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:34,396 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:34,399 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:34,885 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:34,888 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Nasdaq clinches recor', 'ticker': 'META'}
+2025-10-29 20:45:34,888 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:35,524 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:45:35,526 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:45:36,137 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:08,922 INFO agent_app: TURN ADDED: user  | Should I buy META stock price right now? Give me analysis....
+2025-10-29 20:46:08,922 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:09,623 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:25,889 INFO agent_app: TURN ADDED: user  | Find the news about META and link to stock price change....
+2025-10-29 20:46:25,890 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:26,520 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:26,523 INFO root: Calling tool: ticker_info args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:46:26,622 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:27,236 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:27,238 INFO root: Calling tool: news_vs_price args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:46:27,581 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:28,274 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:40,937 INFO agent_app: TURN ADDED: user  | Find the news about META and link to stock price change....
+2025-10-29 20:46:40,938 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:41,472 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:41,474 INFO root: Calling tool: ticker_info args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:46:41,626 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:42,083 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:42,084 INFO root: Calling tool: news_vs_price args={'ticker': 'META', 'days': '30'}
+2025-10-29 20:46:42,449 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:42,850 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:42,852 INFO root: Calling tool: summarize_news args={'headline': "Alphabet stock jumps as Q3 earnings, revenue surpass Wall Street's expectations", 'ticker': 'META'}
+2025-10-29 20:46:42,852 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:43,621 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:43,623 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:44,234 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:44,236 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Nasdaq clinches recor', 'ticker': 'META'}
+2025-10-29 20:46:44,237 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:44,952 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:44,954 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:45,463 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:45,465 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Nasdaq clinches recor', 'ticker': 'META'}
+2025-10-29 20:46:45,465 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:46,179 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:46,182 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:46,692 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:46:57,105 INFO agent_app: TURN ADDED: user  | Find the news about META and link to stock price change....
+2025-10-29 20:46:57,105 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:46:57,753 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 20:47:33,255 INFO agent_app: TURN ADDED: user  | Find the news about META and link to stock price change....
+2025-10-29 20:47:33,255 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 20:47:33,752 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:37,931 INFO agent_app: TURN ADDED: user  | find the news about AMZN and link to stock price change....
+2025-10-29 21:00:37,937 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:38,603 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:38,606 INFO root: Calling tool: ticker_info args={'ticker': 'AMZN', 'days': '30'}
+2025-10-29 21:00:39,155 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:39,727 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:39,730 INFO root: Calling tool: news_vs_price args={'ticker': 'AMZN', 'days': '30'}
+2025-10-29 21:00:40,129 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:40,752 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:40,754 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:00:40,754 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:41,571 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:41,574 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:42,141 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:42,143 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:00:42,144 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:42,798 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:42,800 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:43,417 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:43,419 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:00:43,420 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:44,232 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:00:44,234 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:00:44,846 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:01:37,351 INFO agent_app: TURN ADDED: user  | Should I buy AMZN right now?...
+2025-10-29 21:01:37,352 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:01:37,954 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:01:45,969 INFO agent_app: TURN ADDED: user  | Should I buy AMZN right now?...
+2025-10-29 21:01:45,970 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:01:46,799 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:02:07,885 INFO agent_app: TURN ADDED: user  | Should I buy AMZN right now? At least suggest what to do?...
+2025-10-29 21:02:07,886 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:02:08,713 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:02:32,070 INFO agent_app: TURN ADDED: user  | Should I buy AMZN right now? At least suggest what to do? Give me analysis if not you can suggest....
+2025-10-29 21:02:32,070 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:02:32,777 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:46,653 INFO agent_app: TURN ADDED: user  | Find the news about AMZN and link to stock price change. Analyze whats going on?...
+2025-10-29 21:06:46,659 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:47,304 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:47,307 INFO root: Calling tool: ticker_info args={'ticker': 'AMZN', 'days': '30'}
+2025-10-29 21:06:47,800 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:48,273 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:48,276 INFO root: Calling tool: news_vs_price args={'ticker': 'AMZN', 'days': '30'}
+2025-10-29 21:06:48,710 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:49,178 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:49,179 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:06:49,180 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:49,907 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:49,910 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:50,419 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:50,421 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:06:50,421 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:51,023 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:51,026 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:51,595 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:51,597 INFO root: Calling tool: summarize_news args={'headline': 'Earnings live: Meta stock tumbles, Microsoft slides, and Alphabet rises as Big Tech earnings pour in', 'ticker': 'AMZN'}
+2025-10-29 21:06:51,598 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:52,280 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:06:52,283 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:06:52,840 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:07:55,319 INFO agent_app: TURN ADDED: user  | Analyze whats going on about AMZN stock? Good time to buy or sell?...
+2025-10-29 21:07:55,320 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:07:56,101 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:35,585 INFO agent_app: TURN ADDED: user  | Find the news about GOOG and link to stock price change....
+2025-10-29 21:08:35,586 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:36,109 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:36,111 INFO root: Calling tool: ticker_info args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 21:08:38,439 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:38,914 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:38,916 INFO root: Calling tool: news_vs_price args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 21:08:39,254 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:39,783 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:39,786 INFO root: Calling tool: summarize_news args={'headline': "Alphabet stock jumps as Q3 earnings, revenue surpass Wall Street's expectations", 'ticker': 'GOOG'}
+2025-10-29 21:08:39,786 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:40,647 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:40,650 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:41,217 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:41,219 INFO root: Calling tool: summarize_news args={'headline': "Alphabet stock pops as it's seen as a 'cl", 'ticker': 'GOOG'}
+2025-10-29 21:08:41,220 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:42,038 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:42,040 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:44,672 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:44,674 INFO root: Calling tool: summarize_news args={'headline': "Alphabet stock jumps as Q3 earnings, revenue surpass Wall Street's expectations", 'ticker': 'GOOG'}
+2025-10-29 21:08:44,675 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:45,417 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:08:45,420 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:08:45,953 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:09:00,352 INFO agent_app: TURN ADDED: user  | Analyze whats going on about GOOG stock? Good time to buy or sell?...
+2025-10-29 21:09:00,352 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:09:01,003 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:09:06,084 INFO agent_app: TURN ADDED: user  | Analyze whats going on about GOOG stock? Good time to buy or sell?...
+2025-10-29 21:09:06,085 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:09:06,921 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 21:09:33,582 INFO agent_app: TURN ADDED: user  | Analyze whats going on about GOOG stock? Good time to buy or sell? should i buy?...
+2025-10-29 21:09:33,583 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 21:09:34,377 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:21,155 INFO agent_app: TURN ADDED: user  | Find the news about META and relate to stock price change....
+2025-10-29 22:27:21,161 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:21,873 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:21,876 INFO root: Calling tool: ticker_info args={'ticker': 'META', 'days': '30'}
+2025-10-29 22:27:22,353 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:22,794 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:22,797 INFO root: Calling tool: news_vs_price args={'ticker': 'META', 'days': '30'}
+2025-10-29 22:27:23,566 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:24,228 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:24,230 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'META'}
+2025-10-29 22:27:24,230 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:25,049 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:25,051 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:25,649 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:25,651 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'META'}
+2025-10-29 22:27:25,651 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:26,351 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:27:26,353 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:27:26,880 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:28:27,446 INFO agent_app: TURN ADDED: user  | is it good time to buy meta? what is the fluctuate in last 30 days....
+2025-10-29 22:28:27,447 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:28:28,279 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:24,194 INFO agent_app: TURN ADDED: user  | find the news about Google stock, relate to latest news and what trend it can go in future?...
+2025-10-29 22:29:24,194 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:24,756 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:24,758 INFO root: Calling tool: ticker_info args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 22:29:25,023 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:25,576 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:25,579 INFO root: Calling tool: news_vs_price args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 22:29:26,024 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:26,599 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:26,602 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'GOOG'}
+2025-10-29 22:29:26,602 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:27,510 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:27,512 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:28,442 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:28,444 INFO root: Calling tool: summarize_news args={'headline': '[Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway](https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-climb-after-mixed-big-tech-earnings-with-trump-xi-meet-underway-224956118.html)', 'ticker': 'GOOG'}
+2025-10-29 22:29:28,444 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:29,117 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:29,119 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:29,773 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:29,775 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'GOOG'}
+2025-10-29 22:29:29,775 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:30,490 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:29:30,492 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:29:31,002 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:30:10,228 INFO agent_app: TURN ADDED: user  | find the news about GOOG stock, relate to latest news and what trend it can go in future?...
+2025-10-29 22:30:10,229 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:30:11,063 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:24,645 INFO agent_app: TURN ADDED: user  | find the news about GOOG stock and relate to its stock price change....
+2025-10-29 22:31:24,650 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:25,180 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:25,183 INFO root: Calling tool: ticker_info args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 22:31:25,680 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:26,104 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:26,107 INFO root: Calling tool: news_vs_price args={'ticker': 'GOOG', 'days': '30'}
+2025-10-29 22:31:26,520 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:27,125 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:27,128 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'GOOG'}
+2025-10-29 22:31:27,128 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:28,041 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:28,044 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:28,763 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:28,765 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'GOOG'}
+2025-10-29 22:31:28,765 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:29,582 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:29,584 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:30,299 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:30,301 INFO root: Calling tool: summarize_news args={'headline': 'Stock market today: Dow, S&P 500, Nasdaq futures climb after mixed Big Tech earnings with Trump-Xi meet underway', 'ticker': 'GOOG'}
+2025-10-29 22:31:30,301 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:31,220 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:31:31,223 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:31:32,000 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-10-29 22:32:39,161 INFO agent_app: TURN ADDED: user  | What can be future trend of GOOG stock price in next month? Is it bullish?...
+2025-10-29 22:32:39,162 INFO google_genai.models: AFC is enabled with max remote calls: 10.
+2025-10-29 22:32:40,036 INFO httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"

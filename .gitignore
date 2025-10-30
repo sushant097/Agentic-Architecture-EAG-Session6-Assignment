@@ -4,4 +4,3 @@ uv.lock
 __pycache__/
 .DS_Store
 *.pyc
-logs
