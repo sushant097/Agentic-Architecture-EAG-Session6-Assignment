@@ -27,127 +27,102 @@ The system doesn’t just summarize — it acts like an **autonomous financial a
 
 The architecture follows the classic **Agentic 4-layer design**:
 
-| Layer          | File          | Description                                                                            |
-| -------------- | ------------- | -------------------------------------------------------------------------------------- |
-| **Perception** | `app.py`      | The main FastAPI orchestrator. Receives queries, manages steps, and builds transcript. |
-| **Memory**     | `memory.py`   | Stores ongoing conversation history (turns) and user preferences per session.          |
-| **Decision**   | `decision.py` | Uses Gemini as the planner. Decides whether to call a tool or finalize an answer.      |
-| **Action**     | `action.py`   | Houses tools: `ticker_info`, `news_vs_price`, `summarize_news`, and LLM utility.       |
-| **Schemas**    | `models.py`   | Defines all Pydantic I/O models for typed communication between layers.                |
+| Layer           | File             | Description                                                                 |
+| --------------- | ---------------- | --------------------------------------------------------------------------- |
+| **Perception**  | `app.py`         | FastAPI orchestrator — receives user query, preferences, and triggers flow. |
+| **Memory**      | `memory.py`      | Caches user sessions, turns, and preferences.                               |
+| **Decision**    | `decision.py`    | Planner using Gemini — produces FUNCTION_CALL or FINAL_ANSWER.              |
+| **Action**      | `action.py`      | MCP tool layer — runs stock/news/summarization tools.                       |
+| **Schemas**     | `models.py`      | Pydantic I/O models defining all data contracts.                            |
+| **Prompt Eval** | `prompt_eval.py` | Runs Gemini-based evaluation on the system prompt.                          |
 
 ---
 
-## ⚙️ Setup with **uv**
+## 🧱 Cognitive Architecture (4 Layers)
 
-### 1. Initialize and sync dependencies
+```bash
+👁️ Perceive → 🧠 Remember → 🧭 Decide → 🎯 Act
+```
+
+| Layer             | Cognitive Role                  | Implementation | Key Behavior                                                       |
+| ----------------- | ------------------------------- | -------------- | ------------------------------------------------------------------ |
+| 🧩 **Perception** | Understands user intent + query | `app.py`       | Parses JSON input, merges preferences, initiates loop              |
+| 💭 **Memory**     | Stores past reasoning turns     | `memory.py`    | Maintains transcript + prefs per session                           |
+| 🧠 **Decision**   | Plans next step or final answer | `decision.py`  | Uses Gemini with structured “FUNCTION_CALL / FINAL_ANSWER” outputs |
+| ⚙️ **Action**     | Executes real-world functions   | `action.py`    | Runs MCP tools for stock, news, summarization                      |
+
+---
+
+
+## ⚙️ Setup (via **uv**)
+
+### 1️⃣ Install dependencies
 
 ```bash
 uv sync
 ```
 
-### 2. Add the Gemini API key
+### 2️⃣ Add your Gemini API key
+
+Create a `.env` file:
 
 ```
 GEMINI_API_KEY=your_api_key_here
 ```
 
-inside `.env`
+### 3️⃣ Verify the system prompt
 
-### 3. Run the API
+Run the Gemini verifier to ensure compliance:
+
+```bash
+uv run prompt-verify
+```
+
+Generates `prompt_evaluation.json`.
+
+### 4️⃣ Start servers
 
 ```bash
 uv run agent-server
-```
-
-or directly:
-
-```bash
-uv run uvicorn agent_server.app:app --reload --port 8080
+# or start MCP tools for other agents
+uv run mcp-server
 ```
 
 ---
 
 ## 🧠 Agent Flow (Step-by-Step)
 
-### 1. User Query
+1. **User Input:** Chrome extension sends query + preferences (likes, location, interests).
+2. **Perception:** `app.py` merges prefs + query and creates a new session.
+3. **Decision:** Gemini reads context and outputs one line:
 
-The extension sends a POST request to `/agent` with fields like:
-
-```json
-{
-  "query": "Find the news about AAPL in the last 30 days and link it with price changes.",
-  "ticker": "AAPL",
-  "days": 30,
-  "session_id": "demo"
-}
-```
-
-### 2. Decision Layer (Planner)
-
-Gemini reads the context and decides one of:
-
-* `FUNCTION_CALL: ticker_info|ticker=AAPL|days=30`
-* `FUNCTION_CALL: news_vs_price|ticker=AAPL|days=30`
-* `FUNCTION_CALL: summarize_news|headline="Apple delays iPhone 17"`
-* `FINAL_ANSWER: <text>`
-
-This is the **core reasoning loop** — each decision is recorded as a conversation “turn”.
+   * `FUNCTION_CALL: ticker_info|ticker=AAPL|days=30`
+   * `FUNCTION_CALL: summarize_news|headline="Apple delays iPhone 17"`
+   * `FINAL_ANSWER: AAPL remained steady amid mixed news sentiment.`
+4. **Action:** Executes tools and stores results.
+5. **Memory:** Saves all turns and feedback for next iteration.
+6. **Loop:** Repeats until FINAL_ANSWER is produced or limits reached.
 
 ---
 
-### 3. Tools in Action
+## 🧰 MCP Tool Layer
 
-#### 🪙 `ticker_info`
+`action.py` now doubles as an **MCP server**, exposing tools for both internal and external agent access.
 
-Fetches recent stock data:
+| Tool                          | Description                                        |
+| ----------------------------- | -------------------------------------------------- |
+| `ticker_info(ticker, days)`   | Fetches price data using yfinance                  |
+| `news_vs_price(ticker, days)` | Correlates latest news headlines with price change |
+| `summarize_news(headline)`    | Uses Gemini to summarize a news headline concisely |
 
-```
-AAPL Price Info (last 30d):
-- Latest close: 255.46
-- Change over 30d: -1.12%
-- High: 263.10, Low: 249.32
-```
+Run independently:
 
-#### 📰 `news_vs_price`
-
-Collects the latest news headlines and aligns them with trading dates:
-
-```
-# News vs Price — AAPL (last 30d)
-Date | Close | % Change | Headline
---- | ---:| ---:| ---
-2025-09-26 | 255.46 | -1.00% | [UBS reiterates Neutral, $220 PT on iPhone 17 data](...)
-2025-09-27 | 255.46 | -1.00% | [AI Semiconductor Stock May Join Nvidia, Apple in $2T Club](...)
-```
-
-#### ✍️ `summarize_news`
-
-For each headline, the agent expands the meaning:
-
-```
-UBS reiterates Neutral... → UBS expects stable performance; no major upside projected for AAPL.
-AI Semiconductor... → Market optimism in AI sector indirectly includes Apple.
+```bash
+uv run mcp-server
 ```
 
 ---
 
-### 4. Feedback Loop
-
-Each tool result is fed back into Gemini.
-The LLM sees both *data* and *its past reasoning*, allowing multi-turn improvement.
-
-Typical loop:
-
-```
-Step 1 → Call ticker_info
-Step 2 → Call news_vs_price
-Step 3 → Call summarize_news (multiple times)
-Step 4 → Generate FINAL_ANSWER
-```
-
-Capped at **MAX_STEPS = 3** and **MAX_TOOL_CALLS = 6**.
-
----
 
 ## 🧾 Sample Output
 
@@ -254,15 +229,16 @@ Example:
 
 ## 🧰 Tech Stack
 
-| Component   | Technology                       |
-| ----------- | -------------------------------- |
-| Language    | Python 3.11+                     |
-| Environment | uv package manager               |
-| Framework   | FastAPI                          |
-| LLM         | Gemini 2.0 Flash                 |
-| Data        | yfinance, pandas                 |
-| Validation  | Pydantic                         |
-| Infra       | Local / Chrome Extension backend |
+| Component         | Technology                              |
+| ----------------- | --------------------------------------- |
+| **Language**      | Python 3.13+                            |
+| **Environment**   | uv package manager                      |
+| **Framework**     | FastAPI                                 |
+| **LLM**           | Gemini 2.0 Flash                        |
+| **Data**          | yfinance, pandas                        |
+| **Validation**    | Pydantic                                |
+| **Orchestration** | MCP tools + Agent loop                  |
+| **Infra**         | Local backend / Chrome extension bridge |
 
 ---
 
@@ -275,27 +251,10 @@ Example:
 
 ---
 
-### 🧱 Folder Layout
 
-```
-agentic-ticker-agent/
-├─ agent_server/
-│  ├─ app.py          # FastAPI entrypoint (Perception)
-│  ├─ models.py       # Pydantic models
-│  ├─ memory.py       # Memory store
-│  ├─ decision.py     # LLM planner (Decision)
-│  └─ action.py       # Tool layer (Action)
-├─ pyproject.toml
-├─ uv.lock
-├─ .env
-└─ README.md
-```
 
----
+## 🏁 Summary
 
-## ✅ Summary
+The **Agentic Ticker Research** backend demonstrates a verified, modular **Agentic Cognitive Architecture** with full **Gemini prompt validation**, **MCP tool exposure**, and **Pydantic-typed cognitive layers**.
 
-This backend demonstrates a **complete agentic reasoning loop** applied to stock research.
-Instead of a single LLM call, it uses **multi-turn, feedback-based planning** — fetching, summarizing, and analyzing information step by step.
-
-The result is a transparent, explainable, and extensible **AI financial agent** ready for Chrome extension integration or further autonomous experimentation.
+It’s not just a stock summarizer — it’s a **self-checking, multi-step reasoning agent** that meets the standards of **explicit reasoning, structured output, and fallback robustness**.
